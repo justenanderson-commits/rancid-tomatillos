@@ -1,9 +1,16 @@
-import React from 'react'
-import MovieCardsContainer from './MovieCardsContainer'
-import '../css/AllMovies.scss'
+import React, { Component } from 'react'
+import MovieCardsContainer from './MovieCardsContainer';
+import '../css/AllMovies.scss';
+import movieData from '../apiCalls/mock-data';
+import { render } from 'node-sass';
 
-
-const AllMovies = () => {
+class AllMovies extends Component {
+    constructor() {
+      super()
+      this.state = { movieData } 
+    }
+  
+  render() {
   return (
     <div className="section--all-movies">
       <section className="heading--all-movies">
@@ -24,6 +31,7 @@ const AllMovies = () => {
       <MovieCardsContainer />
     </div>
   )
+}
 }
 
 export default AllMovies

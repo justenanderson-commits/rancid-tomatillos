@@ -10,6 +10,7 @@ const MovieCardContainer = (movies) => {
     return (
       <MovieCard
         posterPath={movie.poster_path}
+        key={movie.id}
        />
     )
   })

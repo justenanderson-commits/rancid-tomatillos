@@ -2,4 +2,10 @@ Footer {
   height: 80px;
   background-color: #1a2129;
   color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+  }
 }

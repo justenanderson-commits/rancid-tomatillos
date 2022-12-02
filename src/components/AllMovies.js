@@ -1,20 +1,23 @@
-import React from 'react'
-import MovieCardsContainer from './MovieCardsContainer';
-import '../css/AllMovies.scss';
-import movieData from '../apiCalls/mock-data';
+import React from "react";
+import MovieCardsContainer from "./MovieCardsContainer";
+import "../css/AllMovies.scss";
+import movieData from "../apiCalls/mock-data";
 
 class AllMovies extends React.Component {
+  state = movieData;
 
-state = movieData
-
-  render () {
+  render() {
     return (
       <div className="section--all-movies">
         <section className="heading--all-movies">
-          <h2>All Movies</h2>
+          <h2>Movies</h2>
           <form className="input--filter" id="input--filter">
-          <label className="label--filter">Filter by rating:</label>
-            <select id="filter-movies" name="filter-movies" placeholder="filter by rating">
+            <label className="label--filter">Filter by rating:</label>
+            <select
+              id="filter-movies"
+              name="filter-movies"
+              placeholder="filter by rating"
+            >
               <option value="one-star">⭐️</option>
               <option value="two-stars">⭐️⭐️</option>
               <option value="threee-stars">⭐️⭐️⭐️</option>
@@ -27,10 +30,8 @@ state = movieData
         </section>
         <MovieCardsContainer movies={this.state.movies} />
       </div>
-    )
-
+    );
   }
- 
 }
 
-export default AllMovies
+export default AllMovies;

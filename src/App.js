@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
-import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import AllMovies from "./AllMovies";
+import AllMovies from "./components/AllMovies";
 
 function App() {
   return (

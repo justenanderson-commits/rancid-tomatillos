@@ -2,22 +2,22 @@ import React from 'react'
 import MovieCard from './MovieCard'
 import '../css/MovieCardsContainer.scss'
 
-const MovieCardContainer = () => {
+const MovieCardContainer = (movies) => {
+  // let posterPath = movies.movies[0].poster_path
+  // console.log('Poster path: ', posterPath)
+
+  const movieCards = movies.movies.map(movie => {
+    return (
+      <MovieCard
+        posterPath={movie.poster_path}
+       />
+    )
+  })
+
   return (
     <>
       <section className="container--movie-cards">
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
+        {movieCards}
       </section>
     </>
   )

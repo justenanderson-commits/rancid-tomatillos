@@ -1,10 +1,10 @@
 import React from 'react';
 import '../css/MovieCard.scss';
 
-const MovieCard = () => {
+const MovieCard = ({ posterPath }) => {
   return (
     <div className="movie-cards">
-      <h2>Movie Card</h2>
+     <img src={posterPath} width="225vw"></img>
     </div>
   )
 }

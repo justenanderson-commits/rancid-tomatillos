@@ -2,13 +2,15 @@ import React from 'react'
 import MovieCardsContainer from './MovieCardsContainer'
 import '../css/AllMovies.scss'
 
+
 const AllMovies = () => {
   return (
     <div className="section--all-movies">
       <section className="heading--all-movies">
         <h2>All Movies</h2>
         <form className="input--filter" id="input--filter">
-          <select id="filter-movies" name="filter-movies" placeholder='filter by rating'>
+        {/* <label className="label--filter">Filter by rating:</label> */}
+          <select id="filter-movies" name="filter-movies" placeholder="filter by rating">
             <option value="one-star">⭐️</option>
             <option value="two-stars">⭐️⭐️</option>
             <option value="threee-stars">⭐️⭐️⭐️</option>

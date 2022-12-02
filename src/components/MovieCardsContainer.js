@@ -10,6 +10,14 @@ const MovieCardContainer = () => {
       <MovieCard />
       <MovieCard />
       <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
       </section>
     </>
   )

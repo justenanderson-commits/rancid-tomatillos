@@ -1,5 +1,14 @@
+
+
 .heading--all-movies {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.section--all-movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+// padding-left: 20%;
 }

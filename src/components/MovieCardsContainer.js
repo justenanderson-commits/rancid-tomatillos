@@ -1,11 +1,14 @@
 import React from 'react'
 import MovieCard from './MovieCard'
-import '../css/MovieCard.scss'
+import '../css/MovieCardsContainer.scss'
 
 const MovieCardContainer = () => {
   return (
     <>
-      <section className="container--movie-cards">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <section className="container--movie-cards">
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
       <MovieCard />
       </section>
     </>

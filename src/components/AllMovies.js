@@ -4,7 +4,7 @@ import '../css/AllMovies.scss'
 
 const AllMovies = () => {
   return (
-    <>
+    <div className="section--all-movies">
       <section className="heading--all-movies">
         <h2>All Movies</h2>
         <form className="input--filter" id="input--filter">
@@ -20,9 +20,8 @@ const AllMovies = () => {
         </form>
       </section>
       <MovieCardsContainer />
-    </>
+    </div>
   )
-
 }
 
 export default AllMovies

@@ -1,5 +1,10 @@
-// import React from 'React'
-// import '../css/MovieCard.scss/'
+import React from 'react'
+import '../css/MovieCard.scss'
 
+const MovieCard = () => {
+  return (
+    <h2>Movie Card</h2>
+  )
+}
 
-// export default MovieCard
+export default MovieCard

@@ -13,5 +13,16 @@
 
 .label--filter {
   margin-left: 20%;
-  // padding-left: 2%;
+}
+
+h2 {
+  display: flex;
+  margin-right: 300px;
+}
+
+.input--filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
 }

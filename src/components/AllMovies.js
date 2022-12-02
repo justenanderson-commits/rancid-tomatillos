@@ -13,7 +13,7 @@ state = movieData
         <section className="heading--all-movies">
           <h2>All Movies</h2>
           <form className="input--filter" id="input--filter">
-          {/* <label className="label--filter">Filter by rating:</label> */}
+          <label className="label--filter">Filter by rating:</label>
             <select id="filter-movies" name="filter-movies" placeholder="filter by rating">
               <option value="one-star">⭐️</option>
               <option value="two-stars">⭐️⭐️</option>

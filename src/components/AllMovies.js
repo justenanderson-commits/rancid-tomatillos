@@ -4,7 +4,10 @@ import "../css/AllMovies.scss";
 import movieData from "../apiCalls/mock-data";
 
 class AllMovies extends React.Component {
-  state = movieData;
+  constructor(props) {
+    super(props);
+    this.state = movieData;
+  }
 
   render() {
     return (
@@ -28,7 +31,10 @@ class AllMovies extends React.Component {
             </select>
           </form>
         </section>
-        <MovieCardsContainer movies={this.state.movies} />
+        <MovieCardsContainer
+          movies={this.state.movies}
+          selectMovie={this.props.selectMovie}
+        />
       </div>
     );
   }

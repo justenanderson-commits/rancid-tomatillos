@@ -3,12 +3,17 @@ import movieData from "../apiCalls/mock-data";
 import React from "react";
 
 class SingleMovie extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      movie: movieData.movies[3],
+      movie: this.props.movie,
     };
   }
+
+  handleReturnToMainPage = () => {
+    this.props.cleanState();
+  };
+
   render() {
     return (
       <div className="single-page-container">
@@ -32,7 +37,7 @@ class SingleMovie extends React.Component {
             reasonable limitation of working hours and periodic holidays with
             pay.
           </p>
-          <button>Go back</button>
+          <button onClick={this.handleReturnToMainPage}>Go back</button>
         </div>
       </div>
     );

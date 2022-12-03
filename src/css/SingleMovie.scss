@@ -1,0 +1,14 @@
+.single-page-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: auto;
+  padding: 24px;
+  p {
+    color: white;
+  }
+  img {
+    margin-right: 60px;
+  }
+}

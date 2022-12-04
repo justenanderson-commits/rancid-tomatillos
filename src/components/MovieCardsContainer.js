@@ -7,9 +7,12 @@ const MovieCardContainer = (props) => {
   // console.log('Poster path: ', posterPath)
 
   const movieCards = props.movies.map((movie) => {
+    function sendMovie() {
+      props.selectMovie(movie);
+    }
     return (
       <MovieCard
-        selectMovie={() => props.selectMovie(movie)}
+        selectMovie={sendMovie}
         posterPath={movie.poster_path}
         key={movie.id}
       />

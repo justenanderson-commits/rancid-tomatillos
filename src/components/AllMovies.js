@@ -1,13 +1,26 @@
 import React from "react";
 import MovieCardsContainer from "./MovieCardsContainer";
 import "../css/AllMovies.scss";
-import movieData from "../apiCalls/mock-data";
+import { getAllMovies } from "../apiCalls/";
 
 class AllMovies extends React.Component {
   constructor(props) {
     super(props);
-    this.state = movieData;
+    this.state = { movies: [] };
   }
+
+  componentDidMount() {
+    this.fetchAllMovies();
+  }
+
+  fetchAllMovies = async () => {
+    try {
+      const items = await getAllMovies();
+      this.setState(items);
+    } catch (error) {
+      this.setState({ error: error.massage });
+    }
+  };
 
   render() {
     return (

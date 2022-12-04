@@ -28,9 +28,9 @@ class SingleMovie extends React.Component {
 
   render() {
     return (
-      this.state.movie && (
+      this.state.movie ? (
         <div className="single-page-container">
-          <img src={this.state.movie.poster_path} />
+          <img src={this.state.movie.poster_path} alt="Movie poster image"/>
           <div className="single-movie-description">
             <h2>
               {this.state.movie.title} (
@@ -42,7 +42,8 @@ class SingleMovie extends React.Component {
             <button onClick={this.handleReturnToMainPage}>Go back</button>
           </div>
         </div>
-      )
+        
+      ) : <h4 className="error-message">{this.state.error}</h4>
     );
   }
 }

@@ -7,7 +7,7 @@ const MovieCard = ({ posterPath, selectMovie }) => {
   };
   return (
     <div className="movie-cards" onClick={handleClick}>
-      <img src={posterPath} width="225vw"></img>
+      <img className="image" src={posterPath} width="225vw"></img>
     </div>
   );
 };

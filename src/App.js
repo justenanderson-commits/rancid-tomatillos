@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import AllMovies from "./components/AllMovies";
 import SingleMovie from "./components/SingleMovie";
 import React from "react";
+import { Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor() {
@@ -19,15 +20,11 @@ class App extends React.Component {
   };
 
   render() {
-    const { selectedMovie } = this.state;
     return (
       <div className="App">
         <Header />
-        {selectedMovie ? (
-          <SingleMovie movie={selectedMovie} cleanState={this.cleanState} />
-        ) : (
-          <AllMovies selectMovie={this.selectMovie} />
-        )}
+        <Route exact path="/" component={AllMovies} />
+        <Route path="/movies/:id" component={SingleMovie} />
         <Footer />
       </div>
     );

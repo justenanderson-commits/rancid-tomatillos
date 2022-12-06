@@ -15,6 +15,7 @@ const MovieCardContainer = (props) => {
         selectMovie={sendMovie}
         posterPath={movie.poster_path}
         key={movie.id}
+        id={movie.id}
       />
     );
   });

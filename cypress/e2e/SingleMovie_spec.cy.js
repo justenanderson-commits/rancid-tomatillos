@@ -29,4 +29,6 @@ describe("Rancid Tomatillos single-movie user flow", () => {
     })
     cy.location().should((loc) => expect(loc.href).to.eq('http://localhost:3000/movies/694919'))
   })
+
+  // Need network error tests //
 })

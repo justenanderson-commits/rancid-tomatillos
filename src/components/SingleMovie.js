@@ -3,7 +3,7 @@ import React from "react";
 import { getAllMovies } from "../apiCalls";
 import { getSelectedMovie } from "../apiCalls";
 import { Route, Redirect, Link } from "react-router-dom";
-import AllMovies from "./AllMovies";
+
 
 class SingleMovie extends React.Component {
   constructor(props) {

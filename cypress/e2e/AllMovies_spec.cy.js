@@ -1,8 +1,8 @@
-describe("Rotten Tomatoes user interface", () => {
+describe("Rancid Tomatillos user interface", () => {
   beforeEach(() => {
     cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
       method: "GET",
-      fixture: "../fixtures/AllMovies.json"
+      fixture: "../fixtures/allmovies.json"
     })
     cy.visit("http://localhost:3000");
   }); 

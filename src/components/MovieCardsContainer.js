@@ -3,8 +3,6 @@ import MovieCard from "./MovieCard";
 import "../css/MovieCardsContainer.scss";
 
 const MovieCardContainer = (props) => {
-  // let posterPath = movies.movies[0].poster_path
-  // console.log('Poster path: ', posterPath)
 
   const movieCards = props.movies.map((movie) => {
     function sendMovie() {

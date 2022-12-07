@@ -27,7 +27,7 @@ class AllMovies extends React.Component {
       <div className="section--all-movies">
         <section className="heading--all-movies">
           <h2>Movies</h2>
-          <h2>{ this.state.error }</h2>
+          {this.state.error && <p>{this.state.error}</p>}
           <form className="input--filter" id="input--filter">
             <label className="label--filter">Filter by rating:</label>
             <select

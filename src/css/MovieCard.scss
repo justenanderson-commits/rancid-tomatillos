@@ -2,8 +2,43 @@
   padding: auto;
   // background-color : rgb(198, 196, 196);
   color: #ffffff;
-}
-
-img {
-  width: 17vw;
+  position: relative;
+  img {
+    width: 100%;
+    margin: auto;
+  }
+  p {
+    background-color: #ffe600;
+    color: black;
+    width: fit-content;
+    padding: 16px;
+    clip-path: polygon(
+      50% 0%,
+      65% 25%,
+      98% 35%,
+      77% 58%,
+      79% 91%,
+      50% 78%,
+      21% 91%,
+      23% 57%,
+      2% 35%,
+      33% 25%
+    );
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    font-weight: 700;
+  }
+  a {
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 12px;
+    margin-top: 4px;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

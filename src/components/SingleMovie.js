@@ -3,7 +3,7 @@ import React from "react";
 import { getAllMovies } from "../apiCalls";
 import { getSelectedMovie } from "../apiCalls";
 import { Route, Redirect, Link } from "react-router-dom";
-import AllMovies from "./AllMovies";
+
 
 class SingleMovie extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class SingleMovie extends React.Component {
   render() {
     return this.state.movie ? (
       <div className="single-page-container">
-        <img src={this.state.movie.poster_path} alt="Movie poster image" />
+        <img className="image" src={this.state.movie.poster_path} alt="Movie poster image" />
         <div className="single-movie-description">
           <h2>
             {this.state.movie.title} (

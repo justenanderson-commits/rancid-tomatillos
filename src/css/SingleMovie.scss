@@ -9,7 +9,13 @@
     color: white;
   }
   img {
+    width: 17vw;
     margin-right: 60px;
+  }
+
+  h2 {
+    color: white;
+    font-size: 40px;
   }
 }
 
@@ -19,4 +25,24 @@
   justify-content: center;
   color: white;
   font-size: 1.5em;
+}
+.error-message-single {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.back-button {
+  color: black;
+  background-color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 12px;
+  margin-top: 4px;
+  padding: 4px 24px;
+  width: fit-content;
+  font-weight: 700;
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -3,17 +3,15 @@ import MovieCard from "./MovieCard";
 import "../css/MovieCardsContainer.scss";
 
 const MovieCardContainer = (props) => {
-
   const movieCards = props.movies.map((movie) => {
-    function sendMovie() {
-      props.selectMovie(movie);
-    }
     return (
       <MovieCard
-        selectMovie={sendMovie}
         posterPath={movie.poster_path}
         key={movie.id}
         id={movie.id}
+        title={movie.title}
+        release={movie.release_date}
+        rating={movie.average_rating}
       />
     );
   });

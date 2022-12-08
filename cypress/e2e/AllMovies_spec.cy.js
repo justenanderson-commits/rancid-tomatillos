@@ -1,4 +1,13 @@
 describe("Rancid Tomatillos user interface", () => {
+  it("should show an error if there is a network problem", () => {
+    cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+      method: "GET",
+      fixture: ""
+    })
+    cy.visit("http://localhost:3000/")
+    cy.get('.text--error').contains("Couldn't communicate with the server. Try again later.")
+  })
+
   beforeEach(() => {
     cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
       method: "GET",
@@ -53,6 +62,4 @@ describe("Rancid Tomatillos user interface", () => {
   it("should show the footer", () => {
     cy.contains("© Copyright 2022 Created by Dmitrii Gubko and Justen Anderson")
   })
-  
-  // Need network error tests //
 })

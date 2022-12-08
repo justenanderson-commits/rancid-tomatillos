@@ -40,7 +40,7 @@ describe("Rancid Tomatillos single-movie user flow", () => {
     cy.get('h4').contains("Couldn't communicate with the server. Try again later.")
   })
 
-  it('should show an error message when the Go Back button is clicked', () => {
+  it('should show an error message when the Go Back button is clicked and there is a network problem', () => {
     cy.get('a').eq(0).click()
     cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919', {
       method: "GET",

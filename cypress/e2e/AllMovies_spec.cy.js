@@ -7,7 +7,8 @@ describe("Rancid Tomatillos user interface", () => {
     cy.visit("http://localhost:3000")
   })
   
-  it("should show the title in the header", () => {
+  it("should show a header with an image and a title", () => {
+    cy.get('.image--header').should('have.attr', 'src', "/static/media/logo.7478f93c9aea2c767b5d.png")
     cy.contains("Rancid Tomatillos")
   })
 

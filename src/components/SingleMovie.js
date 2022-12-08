@@ -48,7 +48,7 @@ class SingleMovie extends React.Component {
       </div>
     ) : (
       <div className="error-message-single">
-        <h4 className="error-message">{this.state.error}</h4>
+        <h4 className="error-message">Couldn't communicate with the server. Try again later.</h4>
         <Link className="back-button" to="/">
           Go back
         </Link>

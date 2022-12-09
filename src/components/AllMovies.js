@@ -60,7 +60,7 @@ class AllMovies extends React.Component {
             </select>
           </form>
         </section>
-        {this.state.error && <p className="error">{this.state.error}</p>}
+        {this.state.error && <p className="text--error">{this.state.error}</p>}
         <MovieCardsContainer
           movies={this.getFilteredMovies()}
           selectMovie={this.props.selectMovie}

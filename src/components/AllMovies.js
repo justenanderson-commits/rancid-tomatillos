@@ -60,7 +60,11 @@ class AllMovies extends React.Component {
             </select>
           </form>
         </section>
-        {this.state.error && <p className="text--error">{this.state.error}</p>}
+        {this.state.error && (
+          <h4 className="text--error">
+            Couldn't communicate with the server. Try again later.
+          </h4>
+        )}
         <MovieCardsContainer
           movies={this.getFilteredMovies()}
           selectMovie={this.props.selectMovie}

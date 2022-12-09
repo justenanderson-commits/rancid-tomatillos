@@ -6,7 +6,7 @@ import { getAllMovies } from "../apiCalls/";
 class AllMovies extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { movies: [] };
+    this.state = { movies: [], byRating: "0" };
   }
 
   componentDidMount() {
@@ -22,31 +22,47 @@ class AllMovies extends React.Component {
     }
   };
 
+  handleFilterByRating = (event) => {
+    this.setState({ byRating: event.target.value });
+  };
+
+  getFilteredMovies = () => {
+    const filtered = this.state.movies.filter((movie) => {
+      return movie.average_rating >= Number(this.state.byRating);
+    });
+    return filtered;
+  };
+
   render() {
     return (
       <div className="section--all-movies">
         <section className="heading--all-movies">
           <h2>Movies</h2>
-          {this.state.error && <h4 className="text--error">Couldn't communicate with the server. Try again later.</h4>}
           <form className="input--filter" id="input--filter">
             <label className="label--filter">Filter by rating:</label>
             <select
+              onChange={this.handleFilterByRating}
               id="filter-movies"
               name="filter-movies"
               placeholder="filter by rating"
             >
-              <option value="one-star">⭐️</option>
-              <option value="two-stars">⭐️⭐️</option>
-              <option value="threee-stars">⭐️⭐️⭐️</option>
-              <option value="four-stars">⭐️⭐️⭐️⭐️</option>
-              <option value="five-stars">⭐️⭐️⭐️⭐️⭐️</option>
-              <option value="six-stars">⭐️⭐️⭐️⭐️⭐️⭐️</option>
-              <option value="seven-stars">⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="0">All ratings</option>
+              <option value="1">⭐️</option>
+              <option value="2">⭐️⭐️</option>
+              <option value="3">⭐️⭐️⭐️</option>
+              <option value="4">⭐️⭐️⭐️⭐️</option>
+              <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="6">⭐️⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="7">⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="8">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="9">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="10">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
             </select>
           </form>
         </section>
+        {this.state.error && <p className="error">{this.state.error}</p>}
         <MovieCardsContainer
-          movies={this.state.movies}
+          movies={this.getFilteredMovies()}
           selectMovie={this.props.selectMovie}
         />
       </div>

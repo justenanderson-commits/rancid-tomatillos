@@ -1,8 +1,9 @@
 .single-page-container {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   max-width: 800px;
+  min-height: 80vh;
   margin: auto;
   padding: 24px;
   p {

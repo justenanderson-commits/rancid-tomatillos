@@ -1,20 +1,25 @@
 .heading--all-movies {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 80vw;
   h2 {
     display: flex;
     margin-right: 300px;
     color: white;
     font-size: 40px;
+    margin: 24px 0;
   }
 }
 
 .section--all-movies {
-  background-color: rgb(51, 53, 55);
   display: flex;
   flex-direction: column;
   align-items: center;
+  .error {
+    min-height: 65vh;
+    color: white;
+  }
 }
 
 .label--filter {

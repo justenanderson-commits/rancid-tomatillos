@@ -57,6 +57,8 @@ Wins
 - In implementing the solution above, we also partially completed our learning goals for the weekend, in that Dmitrii was able to get some great practice with Cypress. The entire experience was organic and highly-effective for learning and problem solving.
 
 Challenges
+- Cypress was difficult. Tests seemed to fail intermittently. We found that restarting Cypress would clear failing tests and allow everything to pass.
+
 - 
 
 ### Additional Notes:

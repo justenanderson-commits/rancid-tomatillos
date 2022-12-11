@@ -5,6 +5,10 @@ This application allows users to browse through a display of 40 movies, each of 
 Link to screen recording:
 https://www.loom.com/share/a68d4dd1c40743e28e4a41f4ef8addd5
 
+
+https://user-images.githubusercontent.com/104015966/206934362-b49c367a-c036-4b01-8b8c-7d0d32f631d4.mp4
+
+
 ## Installation Instructions:
 1. Go to [this repo](https://github.com/dgubko/rancid-tomatillos) on Github
 2. Click Fork > Create New Fork

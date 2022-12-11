@@ -2,6 +2,9 @@
 ## Abstract:
 This application allows users to browse through a display of 40 movies, each of which is clickable to view additional information about the movie. Text labels were added below each movie's image to maximize accessibility. 
 
+Link to screen recording:
+https://www.loom.com/share/a68d4dd1c40743e28e4a41f4ef8addd5
+
 ## Installation Instructions:
 1. Go to [this repo](https://github.com/dgubko/rancid-tomatillos) on Github
 2. Click Fork > Create New Fork
@@ -17,7 +20,7 @@ This application allows users to browse through a display of 40 movies, each of 
 
 ## Context:
 The team held daily standups and followed a kanban workflow using GitHub Projects. Meetings started by checking in with one another as humans. Then accomplishments from the day prior were discussed, what needed to be done that day and by whom, and then collaborative debugging or problem solving was completed (as needed). Some tasks were completed indivdually, others together. The collective estimate is about 50-60 hours of work time invested over 9 days to create this application's functionality and test suite from scratch using React. The Cypress was used for testing. Router provided the routing.
-For accessability we chose large font and neutral, high-contrast colors.
+For accessability we chose large font and neutral, high-contrast colors. 100% Lighthouse Accessibility score.
 
 ## Contributors:
 - [Dmitrii Gubko](https://github.com/dgubko)
@@ -44,7 +47,8 @@ For accessability we chose large font and neutral, high-contrast colors.
 - GitHub
 - Terminal
 - VS Code
-- Chrome Browser/Dev tools
+- Chrome Browser/Dev tools + React dev tools
+- Lighthouse
 - Zoom
 - JavaScript
 - Slack
@@ -61,7 +65,3 @@ Wins
 Challenges
 - Cypress was quirky, at best and difficult at worst. It was laggy, crashed a few times, and tests failed intermittently. We found that restarting Cypress would clear failing tests and allow everything to pass. Like Cypress just needed to reset for everything to work.
 
-- 
-
-### Additional Notes:
-- 

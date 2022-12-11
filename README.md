@@ -1,6 +1,6 @@
 # Rancid Tomatillos Partner Project
 ## Abstract:
-This application allows users to browse through a display of 40 movies, each of which is clickable to view additional information about the movie.
+This application allows users to browse through a display of 40 movies, each of which is clickable to view additional information about the movie. Text labels were added below each movie's image to maximize accessibility. 
 
 ## Installation Instructions:
 1. Go to [this repo](https://github.com/dgubko/rancid-tomatillos) on Github
@@ -56,8 +56,10 @@ Wins
 
 - In implementing the solution above, we also partially completed our learning goals for the weekend, in that Dmitrii was able to get some great practice with Cypress. The entire experience was organic and highly-effective for learning and problem solving.
 
+- In general, we divided tasks effectively and completed them on time.
+
 Challenges
-- Cypress was difficult. Tests seemed to fail intermittently. We found that restarting Cypress would clear failing tests and allow everything to pass.
+- Cypress was quirky, at best and difficult at worst. It was laggy, crashed a few times, and tests failed intermittently. We found that restarting Cypress would clear failing tests and allow everything to pass. Like Cypress just needed to reset for everything to work.
 
 - 
 

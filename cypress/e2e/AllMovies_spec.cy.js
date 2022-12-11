@@ -5,7 +5,7 @@ describe("Rancid Tomatillos user interface", () => {
       fixture: "",
     });
     cy.visit("http://localhost:3000/");
-    cy.get(".text--error").contains("Unexpected end of JSON input");
+    cy.get(".text--error").contains("Couldn't communicate with the server. Try again later.");
   });
 
   beforeEach(() => {
@@ -53,7 +53,7 @@ describe("Rancid Tomatillos user interface", () => {
       .should(
         "have.attr",
         "src",
-        "https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg"
+        "https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"
       );
     cy.get(".image")
       .eq(1)
@@ -83,7 +83,7 @@ describe("Rancid Tomatillos user interface", () => {
     cy.get(".image").eq(1).should("have.attr", "width", "225vw");
     cy.get(".image").eq(2).should("have.attr", "width", "225vw");
     cy.get(".image").eq(3).should("have.attr", "width", "225vw");
-    cy.get(".movie-cards").should("contain", "Money Plane (2020)");
+    cy.get(".movie-cards").should("contain", "Black Adam (2022)");
     cy.get(".movie-cards").should("contain", "Mulan (2020)");
     cy.get(".movie-cards").should("contain", "Rogue (2020)");
     cy.get(".movie-cards").should("contain", "Ava (2020)");

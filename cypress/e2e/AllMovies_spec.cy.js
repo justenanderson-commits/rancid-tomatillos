@@ -45,6 +45,17 @@ describe("Rancid Tomatillos user interface", () => {
       .should("eq", "3");
   });
 
+  it("should filter movies by rating", () => {
+    cy.get('select[name="filter-movies"]')
+      .select(7)
+    cy.get(".container--movie-cards")
+      .should("contain", "Rogue")
+      .should("contain", "2020")
+    cy.get(".image")
+      .eq(0)      
+      .should("have.attr", "src", "https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg")
+  })
+
   it("should show a collection of movies", () => {
     cy.get(".container--movie-cards").should("exist");
     cy.get(".movie-cards").should("have.length", 4).should("be.visible");

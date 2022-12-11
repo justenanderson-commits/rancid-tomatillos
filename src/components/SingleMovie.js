@@ -33,7 +33,7 @@ class SingleMovie extends React.Component {
     } = this.state.movie || {};
     return this.state.movie ? (
       <div className="single-page-container">
-        <img className="image" src={poster_path} alt="Movie poster image" />
+        <img className="image" src={poster_path} alt={title} />
         <div className="single-movie-description">
           <h2>
             {title} ({release_date.slice(0, 4)})

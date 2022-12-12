@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Filter.scss";
 
 class Filter extends React.Component {
   constructor(props) {
@@ -19,7 +20,9 @@ class Filter extends React.Component {
   render() {
     return (
       <form className="input--filter" id="input--filter">
-        <label className="label--filter">Filter by rating:</label>
+        <label htmlFor="filter-movies" className="label--filter">
+          Filter by rating:
+        </label>
         <select
           onChange={this.handleFilterByRating}
           id="filter-movies"

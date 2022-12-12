@@ -70,7 +70,7 @@ describe("Rancid Tomatillos user interface", () => {
       .should("have.attr", "src", "https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg")
     cy.get(".image")
       .eq(2)
-      .should("have.attr", "src", "https://image.tmdb.org/t/p/original//qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg")
+      .should("have.attr", "src", "https://image.tmdb.org/t/p/original//qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg-")
   })
 
   it("should show a collection of movies", () => {

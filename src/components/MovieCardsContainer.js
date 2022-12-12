@@ -16,11 +16,7 @@ const MovieCardContainer = (props) => {
     );
   });
 
-  return (
-    <>
-      <section className="container--movie-cards">{movieCards}</section>
-    </>
-  );
+  return <section className="container--movie-cards">{movieCards}</section>;
 };
 
 export default MovieCardContainer;

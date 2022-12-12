@@ -5,7 +5,11 @@ This application allows users to browse through a display of 40 movies, each of 
 Link to [deployed app](https://rancid-tomatillos-puce.vercel.app/)
 
 
-https://user-images.githubusercontent.com/104015966/206934362-b49c367a-c036-4b01-8b8c-7d0d32f631d4.mp4
+
+
+https://user-images.githubusercontent.com/104015966/207121745-1b4ab6c2-5644-4dc5-a44b-80e16509cb80.mp4
+
+
 
 
 ## Installation Instructions:

@@ -2,8 +2,7 @@
 ## Abstract:
 This application allows users to browse through a display of 40 movies, each of which is clickable to view additional information about the movie. Text labels were added below each movie's image to maximize accessibility. 
 
-Link to screen recording:
-https://www.loom.com/share/a68d4dd1c40743e28e4a41f4ef8addd5
+Link to [deployed app](https://rancid-tomatillos-puce.vercel.app/)
 
 
 https://user-images.githubusercontent.com/104015966/206934362-b49c367a-c036-4b01-8b8c-7d0d32f631d4.mp4

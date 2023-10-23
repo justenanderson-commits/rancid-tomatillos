@@ -2,7 +2,7 @@
 ## Abstract:
 This application allows users to browse through a display of 40 movies, each of which is clickable to view additional information about the movie. Text labels were added below each movie's image to maximize accessibility. 
 
-Link to [deployed app](https://rancid-tomatillos-puce.vercel.app/)
+Link to [deployed app](https://rancid-tomatillos-lemon.vercel.app/)
 
 
 

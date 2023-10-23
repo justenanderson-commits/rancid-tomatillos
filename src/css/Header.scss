@@ -8,22 +8,28 @@ Header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 4px solid #282f37;
-  text-decoration: none;
-  & div {
-    display: flex;
-    align-items: center;
-    & img {
-      padding-left: 32px;
+    & div {
       display: flex;
       align-items: center;
-      width: 128px;
-    }
-    & h1 {
-      padding-left: 64px;
-      text-decoration: none;
-    } & a:visited {
+      & img {
+        padding-left: 32px;
+        display: flex;
+        align-items: center;
+        width: 128px;
+      }
+      & h1 {
+        padding-left: 64px;
         text-decoration: none;
-        color: red;
+      }
     }
-  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
 }

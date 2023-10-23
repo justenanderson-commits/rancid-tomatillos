@@ -5,7 +5,9 @@ describe("Rancid Tomatillos user interface", () => {
       fixture: "",
     });
     cy.visit("http://localhost:3000/");
-    cy.get(".text--error").contains("Couldn't communicate with the server. Try again later.");
+    cy.get(".text--error").contains(
+      "Couldn't communicate with the server. Try again later."
+    );
   });
 
   beforeEach(() => {
@@ -46,32 +48,46 @@ describe("Rancid Tomatillos user interface", () => {
   });
 
   it("should filter movies by rating", () => {
-    cy.get('select[name="filter-movies"]')
-      .select(7)
+    cy.get('select[name="filter-movies"]').select(7);
     cy.get(".container--movie-cards")
       .should("contain", "Rogue")
-      .should("contain", "2020")
+      .should("contain", "2020");
     cy.get(".image")
       .eq(0)
-      .should("have.attr", "src", "https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg")
+      .should(
+        "have.attr",
+        "src",
+        "https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg"
+      );
 
-    cy.get('select[name="filter-movies"]')
-      .select(5)
+    cy.get('select[name="filter-movies"]').select(5);
     cy.get(".container--movie-cards")
       .should("contain", "Mulan")
       .should("contain", "Ava")
       .should("contain", "Rogue")
-      .should("contain", "2020")
+      .should("contain", "2020");
     cy.get(".image")
       .eq(0)
-      .should("have.attr", "src", "https://image.tmdb.org/t/p/original//aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg")
+      .should(
+        "have.attr",
+        "src",
+        "https://image.tmdb.org/t/p/original//aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg"
+      );
     cy.get(".image")
       .eq(1)
-      .should("have.attr", "src", "https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg")
+      .should(
+        "have.attr",
+        "src",
+        "https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg"
+      );
     cy.get(".image")
       .eq(2)
-      .should("have.attr", "src", "https://image.tmdb.org/t/p/original//qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg-")
-  })
+      .should(
+        "have.attr",
+        "src",
+        "https://image.tmdb.org/t/p/original//qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg"
+      );
+  });
 
   it("should show a collection of movies", () => {
     cy.get(".container--movie-cards").should("exist");
@@ -118,6 +134,8 @@ describe("Rancid Tomatillos user interface", () => {
   });
 
   it("should show the footer", () => {
-    cy.contains("© Copyright 2022 Created by Dmitrii Gubko and Justen Anderson")
-  })
-})
+    cy.contains(
+      "© Copyright 2022 Created by Dmitrii Gubko and Justen Anderson"
+    );
+  });
+});

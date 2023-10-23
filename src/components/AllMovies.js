@@ -2,6 +2,7 @@ import React from "react";
 import MovieCardsContainer from "./MovieCardsContainer";
 import "../css/AllMovies.scss";
 import { getAllMovies } from "../apiCalls/";
+import Filter from "./Filter";
 
 class AllMovies extends React.Component {
   constructor(props) {
@@ -22,8 +23,8 @@ class AllMovies extends React.Component {
     }
   };
 
-  handleFilterByRating = (event) => {
-    this.setState({ byRating: event.target.value });
+  changeByRating = (rating) => {
+    this.setState({ byRating: rating });
   };
 
   getFilteredMovies = () => {
@@ -38,37 +39,14 @@ class AllMovies extends React.Component {
       <div className="section--all-movies">
         <section className="heading--all-movies">
           <h2>Movies</h2>
-          <form className="input--filter" id="input--filter">
-            <label className="label--filter">Filter by rating:</label>
-            <select
-              onChange={this.handleFilterByRating}
-              id="filter-movies"
-              name="filter-movies"
-              placeholder="filter by rating"
-            >
-              <option value="0">All ratings</option>
-              <option value="1">⭐️</option>
-              <option value="2">⭐️⭐️</option>
-              <option value="3">⭐️⭐️⭐️</option>
-              <option value="4">⭐️⭐️⭐️⭐️</option>
-              <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
-              <option value="6">⭐️⭐️⭐️⭐️⭐️⭐️</option>
-              <option value="7">⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
-              <option value="8">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
-              <option value="9">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
-              <option value="10">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️</option>
-            </select>
-          </form>
+          <Filter changeByRating={this.changeByRating} />
         </section>
         {this.state.error && (
           <h4 className="text--error">
             Couldn't communicate with the server. Try again later.
           </h4>
         )}
-        <MovieCardsContainer
-          movies={this.getFilteredMovies()}
-          selectMovie={this.props.selectMovie}
-        />
+        <MovieCardsContainer movies={this.getFilteredMovies()} />
       </div>
     );
   }

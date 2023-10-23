@@ -1,6 +1,6 @@
 Header {
   font-family: "Rubik Distressed", cursive;
-  color: #dd53ff;
+  color: #e0110a;
   font-size: 24px;
   background-color: #1a2129;
   height: 80px;
@@ -8,6 +8,7 @@ Header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 4px solid #282f37;
+  text-decoration: none;
   & div {
     display: flex;
     align-items: center;
@@ -19,6 +20,10 @@ Header {
     }
     & h1 {
       padding-left: 64px;
+      text-decoration: none;
+    } & a:visited {
+        text-decoration: none;
+        color: red;
     }
   }
 }
